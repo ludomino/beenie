@@ -20,19 +20,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_151050) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "chatrooms", force: :cascade do |t|
+  create_table "messages", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_chatrooms_on_category_id"
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "chatroom_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["category_id"], name: "index_messages_on_category_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
@@ -87,8 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_151050) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "chatrooms", "categories"
-  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "categories"
   add_foreign_key "messages", "users"
   add_foreign_key "personal_tasks", "user_plants"
   add_foreign_key "plants", "categories"
