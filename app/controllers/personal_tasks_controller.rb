@@ -1,8 +1,4 @@
 class PersonalTasksController < ApplicationController
-  def new
-    @personal_task = PersonalTask.new
-  end
-
   def create
     @personal_task = PersonalTask.new(personal_task_params)
     @personal_task.save

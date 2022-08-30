@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user = current_user
     @message.save
-    redirect_to message_path(@message)
+    redirect_to category_path(params[:id])
   end
 
   private

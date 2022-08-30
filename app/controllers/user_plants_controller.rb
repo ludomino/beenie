@@ -1,12 +1,13 @@
 class UserPlantsController < ApplicationController
-  def new
-    @user_plant = UserPlant.new
+  def show
+    @user_plant = UserPlant.find(params[:id])
+    @personal_task = PersonalTask.new
   end
 
   def create
     @user_plant = UserPlant.new(user_plant_params)
     @user_plant.save
-    redirect_to user_plant_path(@user_plant)
+    redirect_to my_garden_path(@user_plant)
   end
 
   def edit
@@ -22,7 +23,7 @@ class UserPlantsController < ApplicationController
   def destroy
     @user_plant = UserPlant.find(params[:id])
     @user_plant.destroy
-    redirect_to plants_path, status: :see_other
+    redirect_to my_garden_path, status: :see_other
   end
 
   private
