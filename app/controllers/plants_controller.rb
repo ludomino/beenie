@@ -1,7 +1,10 @@
 class PlantsController < ApplicationController
   def index
-    @plants = Plant.all
-    # search params[:query]
+    if params[:query].present?
+      @plants = Plant.where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @plants = Plant.all
+    end
   end
 
   def show
