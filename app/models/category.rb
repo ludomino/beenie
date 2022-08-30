@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-  has_many :plats
-  belongs_to :chatroom
+  has_many :plants
+  has_many :messages
 end
