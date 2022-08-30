@@ -1,4 +1,8 @@
 class UserPlantsController < ApplicationController
+<<<<<<< HEAD
+=======
+
+>>>>>>> 58e0a885b9a920df7c44ba02c7ec141702d48671
   def show
     @user_plant = UserPlant.find(params[:id])
     @personal_task = PersonalTask.new
