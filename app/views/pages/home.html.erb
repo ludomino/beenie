@@ -6,6 +6,7 @@
     <button>Button</button> %>
       <br>
         <div class="button">
+        <form novalidate="novalidate" class="simple_form search" action="/plants" accept-charset="UTF-8" method="get">
           <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query,
             params[:query],
@@ -15,41 +16,21 @@
           <%= submit_tag "Search", class: "btn btn-primary" %>
            <% end %>
         </div>
+        </form>
   </div>
 </div>
 <br>
 <div class="container">
   <h3>Best plants to grow in summer</h3>
-   <div class="d-flex justify-content-center">
-     <div class="card" style="width: 18rem;">
-       <img class="card-img-top" src="" alt="">
-         <div class="card-body">
-           <span>Name</span>
-           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, porro.</p>
-         </div>
-     </div>
-     <div class="card" style="width: 18rem;">
-       <img class="card-img-top" src="" alt="">
-         <div class="card-body">
-           <span>Name</span>
-           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, porro.</p>
-         </div>
-     </div>
-   </div>
-   <div class="d-flex justify-content-center">
-     <div class="card" style="width: 18rem;">
-       <img class="card-img-top" src="" alt="">
-         <div class="card-body">
-           <span>Name</span>
-           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, porro.</p>
-         </div>
-     </div>
-     <div class="card" style="width: 18rem;">
-       <img class="card-img-top" src="" alt="">
-         <div class="card-body">
-           <span>Name</span>
-           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, porro.</p>
-         </div>
-     </div>
-   </div>
+   <div class="cards d-flex align-content-between flex-wrap">
+        <% @plants.first(4).each do |plant| %>
+          <div class="card-trip">
+            <%= cl_image_tag plant.image.key %>
+            <div class="card-trip-infos">
+                <h2><%= link_to plant.name, plant_path(plant) %></h2>
+                <p><%= plant.description%></p>
+            </div>
+          </div>
+        <% end %>
+  </div>
 </div>
