@@ -1,17 +1,19 @@
 class UserPlantsController < ApplicationController
-<<<<<<< HEAD
-=======
-
->>>>>>> 58e0a885b9a920df7c44ba02c7ec141702d48671
   def show
     @user_plant = UserPlant.find(params[:id])
     @personal_task = PersonalTask.new
   end
 
   def create
+    @plant = Plant.find(params[:plant_id])
     @user_plant = UserPlant.new(user_plant_params)
-    @user_plant.save
-    redirect_to my_garden_path(@user_plant)
+    @user_plant.plant = @plant
+    @user_plant.user = current_user
+    if @user_plant.save
+      redirect_to my_garden_path(@user_plant)
+    else
+      render "plants/show", status: :unprocessable_entity
+    end
   end
 
   def edit
