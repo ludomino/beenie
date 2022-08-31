@@ -6,5 +6,6 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @messages = @category.messages.order(created_at: :DESC)
+    @message = Message.new
   end
 end

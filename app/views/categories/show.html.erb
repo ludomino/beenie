@@ -1,0 +1,23 @@
+<div class="container category"
+  data-controller="category-subscription"
+  data-category-subscription-category-id-value="<%= @category.id %>"
+>
+<h1>#<%= @category.name %></h1>
+
+<div class="messages" data-chatroom-subscription-target="messages">
+<% @category.messages.each do |message| %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+ </div>
+
+<%= simple_form_for [@category, @message],
+  html: {data: {action: "turbo:submit-end->chatroom-subscription#resetForm"}, class: "d-flex"} do |f|
+%>
+  <%= f.input :content,
+    label: false,
+    placeholder: "Message #{@category.name}",
+    wrapper_html: {class: "flex-grow-1"}
+  %>
+  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+<% end %>
+</div>
