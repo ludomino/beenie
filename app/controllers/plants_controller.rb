@@ -11,4 +11,8 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
     @user_plant = UserPlant.new
   end
+
+  def plant_params
+    params.require(:plant).permit(:image, :name, :description)
+  end
 end
