@@ -2,19 +2,20 @@
   <% if params[:query] %>
     <h2>You searched for <strong><%= params[:query] %></strong>. We found <%= @plants.count %> plants out of <%= Plant.count %>.</h2>
   <% else %>
-    <h2>All <%= @plants.count %> plants.</h2>
+    <h2 class="searchtitle">All <%= @plants.count %> plants.</h2>
   <% end %>
   <div class="cards">
     <% @plants.each do |plant| %>
-      <div class="card-trip">
-        <%= cl_image_tag plant.image.key %>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= link_to plant.name, plant_path(plant) %></h2>
-            <p><%= plant.description%></p>
+      <%= link_to plant_path(plant) do %>
+        <div class="card-trip">
+          <%= cl_image_tag plant.image.key %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= plant.name %></h2>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
