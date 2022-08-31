@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @plants = Plant.all.sample(10)
   end
 
-  def profile
+  def my_garden
     @plants = current_user.user_plants
   end
 end
