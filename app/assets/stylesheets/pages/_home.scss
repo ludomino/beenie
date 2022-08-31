@@ -1,1 +1,57 @@
 // Specific CSS for your home-page
+.main {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+}
+
+.top {
+  background: #32502E;
+  height: 243px;
+}
+
+.top > h3 {
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 40px;
+  left: 38px;
+}
+
+h1 {
+  color: #ECE7B4;
+  position: relative;
+  top: 30px;
+  left: 38px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: Inter, sans-serif;
+  color: #483838;
+  position: relative;
+  left: 38px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  mix-blend-mode: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.button {
+  position: relative;
+  left: 38px;
+  width: 200px;
+  border-radius: 6px;
+  position: relative;
+  top: 50px;
+}
+
+p {
+  color: #F3EFCC;
+}
+
+.card-trip-info {
+  position: relative;
+  left: 10px;
+}

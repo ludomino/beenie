@@ -1,6 +1,6 @@
 <div class="container mt-3">
   <% if params[:query] %>
-    <h2 class="searchtitle">You searched for <strong><%= params[:query] %></strong>. We found <%= @plant.count %> plants out of <%= Plant.count %>.</h2>
+    <h2>You searched for <strong><%= params[:query] %></strong>. We found <%= @plants.count %> plants out of <%= Plant.count %>.</h2>
   <% else %>
     <h2 class="searchtitle">All <%= @plants.count %> plants.</h2>
   <% end %>

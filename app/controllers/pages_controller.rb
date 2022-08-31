@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @plants = Plant.all.sample(10)
+
   end
 
   def my_garden
