@@ -39,21 +39,19 @@ h3 {
 }
 
 .button {
+  position: relative;
+  left: 38px;
+  width: 200px;
   border-radius: 6px;
   position: relative;
   top: 50px;
 }
 
-.card-trip {
-  display: inline-block;
-  background: #406343;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 7px;
-  width: 150px;
-  height: 100px;
-  margin: 1em;
-}
-
 p {
   color: #F3EFCC;
+}
+
+.card-trip-info {
+  position: relative;
+  left: 10px;
 }
