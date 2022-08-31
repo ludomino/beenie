@@ -1,1 +1,56 @@
 // Specific CSS for your home-page
+.main {
+  font-family: Inter;
+  font-style: normal;
+}
+
+.top {
+  background: #32502E;
+  height: 243px;
+}
+
+.top > h3 {
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  padding: 0px 54px 76px 38px;
+}
+
+h1 {
+  color: #ECE7B4;
+  padding: 50px 244px 115px 38px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+}
+
+h3 {
+  color: #483838;
+  padding-left: 38px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  mix-blend-mode: normal;
+  font-weight: 700;
+}
+
+.button {
+  border-radius: 6px;
+  padding: 0px 59px 13px 38px;
+}
+
+.card {
+  display: inline-block;
+  background: #406343;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+
+span {
+  color: #F3EFCC;
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+p {
+  color: #F3EFCC;
+}

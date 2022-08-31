@@ -1,8 +1,9 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  #skip_before_action :authenticate_user!, only: [:home]
 
   def home
     @plants = Plant.all.sample(10)
+
   end
 
   def profile

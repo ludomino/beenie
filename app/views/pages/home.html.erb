@@ -1,2 +1,55 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="main">
+  <div class="top">
+    <h1>Beenie</h1>
+      <h3>Bring Nature Into Your Home</h3>
+    <%# <input type="text" placeholder="">
+    <button>Button</button> %>
+      <br>
+        <div class="button">
+          <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search your plant"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+           <% end %>
+        </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <h3>Best plants to grow in summer</h3>
+   <div class="d-flex justify-content-center">
+     <div class="card" style="width: 18rem;">
+       <img class="card-img-top" src="" alt="">
+         <div class="card-body">
+           <span>Name</span>
+           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, porro.</p>
+         </div>
+     </div>
+     <div class="card" style="width: 18rem;">
+       <img class="card-img-top" src="" alt="">
+         <div class="card-body">
+           <span>Name</span>
+           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, porro.</p>
+         </div>
+     </div>
+   </div>
+   <div class="d-flex justify-content-center">
+     <div class="card" style="width: 18rem;">
+       <img class="card-img-top" src="" alt="">
+         <div class="card-body">
+           <span>Name</span>
+           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, porro.</p>
+         </div>
+     </div>
+     <div class="card" style="width: 18rem;">
+       <img class="card-img-top" src="" alt="">
+         <div class="card-body">
+           <span>Name</span>
+           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, porro.</p>
+         </div>
+     </div>
+   </div>
+</div>
