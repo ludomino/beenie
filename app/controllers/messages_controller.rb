@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     if @message.save
       CategoryChannel.broadcast_to(
         @category,
-        render_to_string(partial: "message", locals: {message: @message})
+        render_to_string(partial: "message", locals: { message: @message })
       )
       head :ok
     else
