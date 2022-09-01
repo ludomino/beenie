@@ -8,8 +8,8 @@
 
 UserPlant.destroy_all
 Plant.destroy_all
-Category.destroy_all
 Message.destroy_all
+Category.destroy_all
 
 category_1 = Category.create!(name: "Asparagaceae")
 category_2 = Category.create!(name: "Cactaceae")

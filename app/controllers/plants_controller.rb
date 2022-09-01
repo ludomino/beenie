@@ -1,7 +1,7 @@
 class PlantsController < ApplicationController
   def index
     if params[:query].present?
-      @plants = Plant.where("name ILIKE ?", "%#{params[:query]}%")
+      @plants = Plant.global_search(params[:query])
     else
       @plants = Plant.all
     end
