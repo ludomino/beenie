@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
-  has_many :user_plants
-  has_many :messages
+  has_many :user_plants, dependent: :destroy
+  has_many :messages, dependent: :destroy
   has_many :personal_tasks, through: :user_plants
 end
