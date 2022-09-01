@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :user_plants, only: [:create]
   end
 
-  resources :user_plants, only: [:edit, :update, :destroy] do
+  resources :user_plants, only: [:edit, :update, :destroy, :show] do
     resources :personal_tasks, only: [ :show, :create, :update, :destroy ]
   end
 
