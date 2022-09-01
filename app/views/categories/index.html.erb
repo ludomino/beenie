@@ -1,0 +1,16 @@
+
+<div class="categoryname d-flex ms-4 mt-5 align-items-center">
+  <h1>Chat</h1>
+</div>
+
+<div class="container">
+  <% @categories.each do |category| %>
+    <% if current_user.favorites_categories.include?(category) %>
+    <div class="card-category me-3 ms-3 mb-3">
+      <%= link_to category_path(category) do %>
+        <h1><%= category.name %></h1>
+      <% end %>
+    </div>
+    <% end %>
+  <% end %>
+</div>

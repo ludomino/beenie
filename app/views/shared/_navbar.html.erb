@@ -7,7 +7,7 @@
         </li>
         <% if user_signed_in? %>
           <li class="item">
-            <%= link_to "#", class: "navlink" do %>
+            <%= link_to categories_path, class: "navlink" do %>
               <i class="fa-solid fa-comment-dots"></i>
             <% end %>
           </li>
