@@ -29,3 +29,39 @@
     }
   }
 }
+.categoryname h1{
+  font-family: Inter, sans-serif;
+  color: #483838;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.link {
+  font-family: Inter, sans-serif;
+  color: #483838;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.card-category {
+  background-color: $jungle-green;
+  background-size: cover;
+  background-position: center;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $cream;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category h1 {
+  color: white;
+}
