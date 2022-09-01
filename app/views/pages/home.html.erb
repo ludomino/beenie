@@ -1,37 +1,38 @@
 <div class="main">
   <div class="top">
     <h1>Beenie</h1>
-      <h3>Bring Nature Into Your Home</h3>
-    <%# <input type="text" placeholder="">
-    <button>Button</button> %>
-    <%#  %>
+      <h3 class="toptitle">Bring Nature Into Your Home</h3>
+
       <br>
-        <div class="button">
-        <form novalidate="novalidate" class="simple_form search" action="/plants" accept-charset="UTF-8" method="get">
-          <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Search your plant"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-           <% end %>
-        </div>
-        </form>
+      <br>
+
+      <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a plant or category"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+
   </div>
 </div>
 <br>
 <div class="container">
-  <h3>Best plants to grow in summer</h3>
-  <div class="cards">
-        <% @plants.first(4).each do |plant| %>
+  <h3 class="midtitle">Best plants to grow in summer</h3>
+    <div class="cards">
+      <% @plants.sample(4).each do |plant| %>
+        <%= link_to plant_path(plant) do %>
           <div class="card-trip">
-            <%= cl_image_tag plant.image.key %>
-            <div class="card-trip-info">
-                <h2><%= link_to plant.name, plants_path(plant) %></h2>
-                <p><%= plant.description.truncate_words(10)%></p>
+            <h3><%= plant.category.name %></h3>
+              <%= cl_image_tag plant.image.key %>
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= plant.name %></h2>
+                </div>
             </div>
           </div>
         <% end %>
+      <% end %>
   </div>
 </div>
