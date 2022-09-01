@@ -1,4 +1,8 @@
+<div class="categoryname d-flex ms-4 mt-5 align-items-center">
+  <h3><%= link_to "<",  categories_path, class:"link me-3" %></h3>
   <h1>#<%= @category.name %></h1>
+</div>
+
 <div class="container category"
   data-controller="category-subscription"
   data-category-subscription-category-id-value="<%= @category.id %>"
@@ -18,6 +22,7 @@
     wrapper_html: {class: "flex-grow-1"}
   %>
   <%= f.submit "Send", class: "btn btn-light mb-3" %>
+  <%= f.input :image, as: :file %>
 <% end %>
 </div>
 </div>
