@@ -11,7 +11,7 @@ class UserPlantsController < ApplicationController
     @user_plant.plant = @plant
     @user_plant.user = current_user
     if @user_plant.save
-      redirect_to my_garden_path(@user_plant)
+      redirect_to garden_path(current_user)
     else
       render "plants/show", status: :unprocessable_entity
     end
