@@ -1,10 +1,55 @@
 .image-show-plant {
-  height: 200px;
-  width: 150%;
+  height: 260px;
+  width: 100%;
   object-fit: cover;
+  display: block;
+  margin: auto;
+  border-bottom: white solid 1px;
 }
 
 .containertext {
 padding: 15px;
 color: white;
+height: 420px;
+}
+
+
+.show-h2 p {
+ font-size: 18px;
+}
+
+.show-h2 h1 {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 34px;
+  padding-bottom: 10px;
+}
+
+.show-h2 h3 {
+  font-size: 26px;
+}
+
+.descrip p {
+  color:white;
+  font-size: 20px;
+  margin-bottom: 0px !important;
+}
+
+.descrip {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.formulaire {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-dark {
+  background-color: rgb(81, 57, 57);
+  font-size: smaller;
+}
+
+.containershow {
+  overflow: scroll;
+  height: calc(100vh - 60px);
+
 }
