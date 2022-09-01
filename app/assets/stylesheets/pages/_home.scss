@@ -37,13 +37,20 @@
   font-size: 20px;
 }
 
-.button {
+.form-control {
   position: relative;
   left: 38px;
-  width: 200px;
-  border-radius: 6px;
+  background-color: white;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  width: 62%;
+}
+
+.btn {
   position: relative;
-  top: 50px;
+  left: 38px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 p {

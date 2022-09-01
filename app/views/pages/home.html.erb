@@ -4,13 +4,12 @@
       <h3 class="toptitle">Bring Nature Into Your Home</h3>
 
       <br>
-      <br>
 
       <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a plant or category"
+          placeholder: "Search plants"
         %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
