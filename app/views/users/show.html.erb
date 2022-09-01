@@ -1,9 +1,0 @@
-<div class="banner d-flex align-items-center justify-content-center">
-  <% if current_user.photo.attached? %>
-      <%= cl_image_tag current_user.photo.key, class:"profilepic" %>
-  <% else %>
-    <img src="https://cdn1.iconfinder.com/data/icons/random-115/24/person-512.png" alt="avatar" class="avatar">
-  <% end %>
-</div>
-
-<h1>Hey <%= current_user.nickname %> </h1>
