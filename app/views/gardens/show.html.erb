@@ -7,5 +7,23 @@
 </div>
 
 <div class="finfo d-flex justify-content-center mt-5">
-<h1><%= current_user.nickname %> </h1>
+  <h2><%= current_user.nickname %> </h1>
+</div>
+
+<div class="wishlist mt-3">
+  <h1 class="ms-3">Your wishlist</h1>
+  <div class="profilecards mt-3 ms-3 me-3">
+    <% @user_plants.each do |user_plant| %>
+      <%= link_to user_plant_path(user_plant) do %>
+        <div class="card-profile">
+          <%= cl_image_tag user_plant.plant.image.key %>
+          <div class="card-profile-infos">
+            <div>
+              <h2><%= user_plant.plant.name %></h2>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
