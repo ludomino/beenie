@@ -6,13 +6,13 @@
   <% end %>
 </div>
 
-<div class="fname d-flex justify-content-center mt-4">
+<div class="fname d-flex justify-content-center mt-4 mb-2">
   <h1><%= current_user.nickname %> </h1>
 </div>
 
 
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
+<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#my-garden" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">My garden</button>
   </li>
@@ -47,19 +47,19 @@
       <h1 class="ms-3">Your wishlist</h1>
       <div class="profilecards mt-3 ms-3 me-3">
         <% @user_plants.where(planted_day: nil).each do |user_plant| %>
-          <%= link_to user_plant_path(user_plant) do %>
-            <div class="card-profile">
+          <div class="card-profile">
+            <%= link_to "#" do %>
               <%= cl_image_tag user_plant.plant.image.key %>
-              <div class="card-profile-infos">
+              <div class="card-profile-infos mb-2">
                 <div>
                   <h2><%= user_plant.plant.name %></h2>
                 </div>
               </div>
+            <% end %>
+            <div class="adding ms-3">
+              <%= link_to "Add to my garden", buy_plant_user_plant_path(user_plant)  %>
             </div>
-            <div class="adding">
-               <%= link_to "Add to my garden", buy_plant_user_plant_path(user_plant)  %>
-            </div>
-          <% end %>
+          </div>
         <% end %>
       </div>
     </div>
