@@ -102,7 +102,7 @@ puts "plant x24"
 UserPlant.create!(user: user_jj, plant_id: Plant.first.id, planted_day: Date.yesterday)
 UserPlant.create!(user: user_karine, plant_id: Plant.second.id, planted_day: Date.today)
 UserPlant.create!(user: user_abdel, plant_id: Plant.third.id, planted_day: Date.today)
-puts "userplants"
+puts "userplantss"
 
 Message.create!(user: user_abdel, category: category_2, content: "Hi cactus lover !")
 Message.create!(user: user_abdel, category: category_2, content: "My cactus is not doing well, it is losing its spines 😭😭😭 pleeeeease give me your advice ")
