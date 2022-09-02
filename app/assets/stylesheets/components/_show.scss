@@ -9,7 +9,7 @@
 
 .containertext {
 padding: 15px;
-color: white;
+color: $greyblack;
 height: 420px;
 }
 
@@ -29,7 +29,7 @@ height: 420px;
 }
 
 .descrip p {
-  color:white;
+  color:$greyblack;
   font-size: 20px;
   margin-bottom: 0px !important;
 }
@@ -44,7 +44,7 @@ height: 420px;
 }
 
 .btn-dark {
-  background-color: rgb(81, 57, 57);
+  background-color: $greensea;
   font-size: smaller;
 }
 

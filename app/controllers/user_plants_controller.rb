@@ -33,9 +33,17 @@ class UserPlantsController < ApplicationController
     redirect_to my_garden_path, status: :see_other
   end
 
+  def buy_plant
+    @user_plant = UserPlant.find(params[:id])
+    @user_plant.planted_day = Date.today
+    @user_plant.save
+    redirect_to garden_path(@user_plant.user)
+  end
+
   private
 
   def user_plant_params
     params.require(:user_plant).permit(:planted_day)
   end
+
 end

@@ -1,25 +1,27 @@
 <div class="main">
   <div class="top">
-    <h1>Beenie</h1>
+    <div class="textbanner ms-3">
+      <br>
+      <h1>Beenie</h1>
       <h3 class="toptitle">Bring Nature Into Your Home</h3>
-
-      <br>
-      <br>
-
-      <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
+    </div>
+    <div class="search-form-control form-group ms-3 mt-4">
+      <%= form_with url: plants_path, method: :get, class: "d-flex align-items-center" do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a plant or category"
+          placeholder: "Find your plant or category 🌱"
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= button_tag class: "searchbtn btn btn-danger d-flex justify-content-center " do %>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        <% end %>
       <% end %>
-
+    </div>
   </div>
 </div>
 <br>
-<div class="container">
-  <h3 class="midtitle">Best plants to grow in summer</h3>
+<div class="container ms-1">
+  <h3 class="midtitle ">Best plants to grow in summer</h3>
     <div class="cards">
       <% @plants.sample(4).each do |plant| %>
         <%= link_to plant_path(plant) do %>

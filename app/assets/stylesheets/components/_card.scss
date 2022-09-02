@@ -3,7 +3,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5%;
-  background-color: $kaki;
+  background-color: $greensea;
   height: 100%;
 }
 
@@ -21,7 +21,7 @@
   font-weight: bold;
   margin: 0;
   text-transform: uppercase;
-  color: $cream;
+  color: $white;
 }
 
 .card-trip p {
@@ -40,7 +40,7 @@
 }
 
 .card-trip-infos {
-  color: $cream;
+  color: $white;
   overflow: hidden;
 
 }
@@ -65,7 +65,7 @@ a {
 
 .searchtitle {
   font-family: Inter, sans-serif;
-  color: #483838;
+  color: $greyblack;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-weight: 700;
   font-size: 20px;
@@ -78,8 +78,13 @@ ul {
 
 .card-trip h3 {
   padding-left: 15px;
-  color: beige;
+  color: $white;
   font-size: 12px;
   padding-top: 3px;
   padding-left: 12px;
 }
+
+// .indexsearchbar{
+//   background-color: $greensea;
+//   height: 15vh;
+// }
