@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   resources :user_plants, only: [:edit, :update, :destroy, :show] do
     resources :personal_tasks, only: [ :show, :create, :update, :destroy ]
+    member do
+      get :buy_plant
+    end
   end
 
   resources :categories, only: [:index, :show] do

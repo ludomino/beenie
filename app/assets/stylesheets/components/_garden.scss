@@ -1,8 +1,10 @@
 .profilepic {
   border-radius: 50%;
-  width: 150px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   top: 99px;
+  object-fit: cover;
 }
 
 .banner {
@@ -21,7 +23,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5%;
-  background-color: $kaki;
+  background-color: $greensea;
   height: 100%;
 }
 
@@ -39,7 +41,7 @@
   font-weight: bold;
   margin: 0;
   text-transform: uppercase;
-  color: $cream;
+  color: $white;
 }
 
 .card-profile p {
@@ -58,7 +60,7 @@
 }
 
 .card-profile-infos {
-  color: $cream;
+  color: $white;
   overflow: hidden;
 
 }
@@ -76,4 +78,8 @@
   margin-top: 5px;
   margin-bottom: 8px;
   font-size: smaller;
+}
+
+.adding a {
+  color: $greyblack;
 }
