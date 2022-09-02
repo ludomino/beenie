@@ -1,8 +1,10 @@
 <div class="main">
   <div class="top">
-    <h1>Beenie</h1>
+    <div class="titlee">
+      <h1>Beenie</h1>
       <h3 class="toptitle">Bring Nature Into Your Home</h3>
-
+    </div>
+    
       <br>
       <br>
 
@@ -16,23 +18,27 @@
       <% end %>
 
   </div>
+
 </div>
-<br>
-<div class="container">
-  <h3 class="midtitle">Best plants to grow in summer</h3>
-    <div class="cards">
-      <% @plants.sample(4).each do |plant| %>
-        <%= link_to plant_path(plant) do %>
-          <div class="card-trip">
-            <h3><%= plant.category.name %></h3>
-              <%= cl_image_tag plant.image.key %>
-              <div class="card-trip-infos">
-                <div>
-                  <h2><%= plant.name %></h2>
-                </div>
+
+<div class="mainy">
+  <br>
+  <div class="container">
+    <h3 class="midtitle">Best plants to grow in summer</h3>
+      <div class="cards">
+        <% @plants.sample(4).each do |plant| %>
+          <%= link_to plant_path(plant) do %>
+            <div class="card-trip">
+              <h3><%= plant.category.name %></h3>
+                <%= cl_image_tag plant.image.key %>
+                <div class="card-trip-infos">
+                  <div>
+                    <h2><%= plant.name %></h2>
+                  </div>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+    </div>
   </div>
 </div>
