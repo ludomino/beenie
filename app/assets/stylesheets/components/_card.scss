@@ -84,7 +84,11 @@ ul {
   padding-left: 12px;
 }
 
-// .indexsearchbar{
-//   background-color: $greensea;
-//   height: 15vh;
-// }
+.searchbtn2 {
+  position: absolute;
+  left: 315px;
+  /* top: 130px; */
+  border-radius: 128px;
+  height: 30px;
+  width: 30px;
+}
