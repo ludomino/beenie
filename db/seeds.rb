@@ -5,11 +5,29 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
 UserPlant.destroy_all
 Plant.destroy_all
 Message.destroy_all
 Category.destroy_all
+User.destroy_all
+
+user_jj = User.create!(nickname: "Jeanjean", email: "jean@mail.com", password: "jean123", address: "paris")
+file = URI.open("https://jardinsetloisirs.be/wp-content/uploads/sites/44/2021/01/kamerplanten-2021-800x445.jpg")
+user_jj.photo.attach(io: file, filename: "user1.png", content_type: "image/png")
+user_jj.save
+puts "user jj"
+
+user_karine = User.create!(nickname: "Karine", email: "karine@mail.com", password: "karine123", address: "marseille")
+file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRdKVfCOYAWXRx5b2DXMUc_eIZIZQljCslFM4sRiW6uR3_T99fjcPIDpO3ANPkTp0SHQ&usqp=CAU")
+user_karine.photo.attach(io: file, filename: "user1.png", content_type: "image/png")
+user_karine.save
+puts "user karine"
+
+user_abdel = User.create!(nickname: "abdl22", email: "abdel@mail.com", password: "abdel123", address: "paris")
+file = URI.open("https://thumbs.dreamstime.com/b/un-homme-plus-%C3%A2g%C3%A9-jardinier-asiatique-actif-assis-%C3%A0-la-table-avec-des-plantes-d-int%C3%A9rieur-et-outils-de-jardinage-qui-prennent-193444114.jpg")
+user_abdel.photo.attach(io: file, filename: "user1.png", content_type: "image/png")
+user_abdel.save
+puts "user abdel"
 
 category_1 = Category.create!(name: "Asparagaceae")
 category_2 = Category.create!(name: "Cactaceae")
@@ -78,8 +96,16 @@ plants.each_with_index do |plant, index|
   file = URI.open(images[index])
   plant.image.attach(io: file, filename: "plant#{index}.png", content_type: "image/png")
   plant.save
-  puts plant
 end
+puts "plant x24"
 
-#UserPlant.create!(user_id: User.first.id, plant_id: Plant.all.sample.id, planted_day: Date.today)
-# Message.create!(user_id: )
+UserPlant.create!(user: user_jj, plant_id: Plant.first.id, planted_day: Date.yesterday)
+UserPlant.create!(user: user_karine, plant_id: Plant.second.id, planted_day: Date.today)
+UserPlant.create!(user: user_abdel, plant_id: Plant.third.id, planted_day: Date.today)
+puts "userplantss"
+
+Message.create!(user: user_abdel, category: category_2, content: "Hi cactus lover !")
+Message.create!(user: user_abdel, category: category_2, content: "My cactus is not doing well, it is losing its spines 😭😭😭 pleeeeease give me your advice ")
+Message.create!(user: user_karine, category: category_2, content: "You probably watered it too much 😔 ")
+Message.create!(user: user_karine, category: category_2, content: "Heeeeeyy i have a cactus to give if interested ! (it's free) 😘😘")
+puts "msg"
