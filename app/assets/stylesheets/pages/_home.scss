@@ -5,23 +5,23 @@
 }
 
 .top {
-  background: $kaki;
-  height: 160px;
+  background: $greensea;
+  height: 21vh;
 }
 
-.top > h3 {
+.textbanner > h3 {
   color: #FFFFFF;
   mix-blend-mode: normal;
-  position: relative;
-  top: 23px;
-  left: 38px;
+  // position: absolute;
+  // top: 64px;
+  // left: 21px;
 }
 
-.top h1 {
-  color: #ECE7B4;
-  position: relative;
-  top: 20px;
-  left: 38px;
+.textbanner h1 {
+  color: $mintgreen;
+  // position: absolute;
+  // top: 20px;
+  // left: 21px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-weight: 700;
   font-size: 32px;
@@ -29,32 +29,49 @@
 
 .toptitle {
   font-family: Inter, sans-serif;
-  position: relative;
-  left: 38px;
+  // position: absolute;
+  // left: 21px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  mix-blend-mode: normal;
   font-weight: 700;
   font-size: 20px;
 }
 
-.button {
-  position: relative;
-  left: 38px;
-  width: 200px;
-  border-radius: 6px;
-  position: relative;
-  top: 50px;
-}
+// .button {
+//   position: absolute;
+//   left: 38px;
+//   width: 200px;
+//   border-radius: 6px;
+//   top: 50px;
+// }
 
 
 .midtitle {
   padding-bottom: 10px;
   font-family: Inter, sans-serif;
-  color: #483838;
+  color: $greyblack;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  mix-blend-mode: normal;
   font-weight: 700;
   font-size: 20px;
-  position: relative;
-  left: 38px;
+}
+
+.form-control{
+  background-color: $mintgreen;
+  border-radius: 128px;
+
+}
+.search-form-control{
+  // position: absolute;
+  width: 323px;
+  // left: 21px;
+  // top: 103px;
+
+}
+
+.searchbtn {
+  position: absolute;
+  left: 303px;
+  /* top: 130px; */
+  border-radius: 128px;
+  height: 30px;
+  width: 30px;
 }
