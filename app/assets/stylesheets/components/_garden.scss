@@ -86,11 +86,24 @@
 
 .nav-link {
   color: $greyblack;
+
 }
+
 
 .nav-tabs .nav-link.active {
   background-color: $greensea;
   color: $white;
+  border-color: $greensea;
+}
+.nav-tabs .nav-link {
+  border-width: 1px;
+  border-color: $greensea;
+  border: solid;
+}
+
+
+.nav-tabs {
+  border-width: 0px;
 }
 // #home-tab {
 //   background-color: $mintgreen;
