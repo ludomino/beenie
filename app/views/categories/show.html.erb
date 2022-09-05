@@ -1,28 +1,33 @@
-<div class="categoryname d-flex ms-4 mt-5 align-items-center">
-  <h3><%= link_to "<",  categories_path, class:"link me-3" %></h3>
-  <h1>#<%= @category.name %></h1>
+<div class="categorynamemessage d-flex align-items-center">
+  <div class="categorytext ms-4 mt-3">
+    <h3><%= link_to "<",  categories_path, class:"link" %></h3>
+    <h1>#<%= @category.name %></h1>
+  </div>
 </div>
 
 <div class="container category"
-  data-controller="category-subscription"
-  data-category-subscription-category-id-value="<%= @category.id %>"
->
-    <div class="messages" data-category-subscription-target="messages">
-      <% @category.messages.each do |message| %>
-        <%= render "messages/message", message: message %>
+    data-controller="category-subscription"
+    data-category-subscription-category-id-value="<%= @category.id %>"
+  >
+      <div class="messages" data-category-subscription-target="messages">
+        <% @category.messages.each do |message| %>
+          <%= render "messages/message", message: message %>
+        <% end %>
+      </div>
+
+  <div class="messagesender">
+    <%= simple_form_for [@category, @message],
+      html: {data: {action: "turbo:submit-end->category-subscription#resetForm"}, class: "d-flex"} do |f|
+    %>
+      <%= f.input :content,
+        label: false,
+        placeholder: "Message #{@category.name}",
+        wrapper_html: {class: "flex-grow-1"}
+      %>
+      <%= f.submit "Send", class: "btn btn-light mb-3" %>
+      <%#= f.input :image, as: :file %>
       <% end %>
   </div>
 
-<%= simple_form_for [@category, @message],
-  html: {data: {action: "turbo:submit-end->category-subscription#resetForm"}, class: "d-flex"} do |f|
-%>
-  <%= f.input :content,
-    label: false,
-    placeholder: "Message #{@category.name}",
-    wrapper_html: {class: "flex-grow-1"}
-  %>
-  <%= f.submit "Send", class: "btn btn-light mb-3" %>
-  <%#= f.input :image, as: :file %>
-<% end %>
 </div>
 </div>
