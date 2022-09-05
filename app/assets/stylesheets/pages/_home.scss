@@ -3,12 +3,10 @@
   font-family: Inter, sans-serif;
   font-style: normal;
 }
-
 .top {
   background: $greensea;
   height: 21vh;
 }
-
 .textbanner > h3 {
   color: #FFFFFF;
   mix-blend-mode: normal;
@@ -16,7 +14,6 @@
   // top: 64px;
   // left: 21px;
 }
-
 .textbanner h1 {
   color: $mintgreen;
   // position: absolute;
@@ -26,7 +23,6 @@
   font-weight: 700;
   font-size: 32px;
 }
-
 .toptitle {
   font-family: Inter, sans-serif;
   // position: absolute;
@@ -35,7 +31,6 @@
   font-weight: 700;
   font-size: 20px;
 }
-
 // .button {
 //   position: absolute;
 //   left: 38px;
@@ -43,8 +38,6 @@
 //   border-radius: 6px;
 //   top: 50px;
 // }
-
-
 .midtitle {
   padding-bottom: 10px;
   font-family: Inter, sans-serif;
@@ -53,20 +46,16 @@
   font-weight: 700;
   font-size: 20px;
 }
-
 .form-control{
   background-color: $mintgreen;
   border-radius: 128px;
-
 }
 .search-form-control{
   // position: absolute;
   width: 323px;
   // left: 21px;
   // top: 103px;
-
 }
-
 .searchbtn {
   position: absolute;
   left: 303px;

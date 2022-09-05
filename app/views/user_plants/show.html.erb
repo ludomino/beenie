@@ -1,0 +1,38 @@
+
+<div class= "containershow">
+  <div class="img_show" class="row" class="col-sm-6">
+    <%= cl_image_tag @plant.image.key, class: "image-show-plant" %>
+  </div>
+
+  <div class='containertext'>
+    <div class="row">
+      <div class= "show-h2" class="row" class="col-sm-3">
+
+        <p> Category: <%= @plant.category.name %> </p>
+        <h1> <%= @plant.name %> </h1>
+
+        <h3 class="descrip">Description</h3>
+        <p> <%= @plant.description%> </p>
+        <h3 class="descrip">Tasks</h3>
+        <% @plant.tasks.each do |task| %>
+          <p><%= task.description %></p>
+        <% end %>
+
+        <h3 class="descrip">My personal taks</h3>
+        <%  @user_plant.personal_tasks.each do |personal_task| %>
+          <div class="d-flex">
+            <p class="pe-3"><%= personal_task.description %></p>
+            <%= link_to "🗑",
+              user_plant_personal_task_path(@user_plant, personal_task),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+            %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= simple_form_for [@user_plant, @personal_task] do |f| %>
+    <%= f.input :description, label: false, placeholder: "Add a task"%>
+    <%= f.submit "Add a task" %>
+  <% end %>
+</div>
