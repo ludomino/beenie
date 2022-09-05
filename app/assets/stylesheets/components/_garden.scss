@@ -27,7 +27,7 @@
   height: 100%;
 }
 
-.card-profile > img {
+.card-profile img {
   height: 150px;
   width: 97%;
   object-fit: cover;
@@ -81,5 +81,21 @@
 }
 
 .adding a {
+  color: $white;
+}
+
+.nav-link {
   color: $greyblack;
 }
+
+.nav-tabs .nav-link.active {
+  background-color: $greensea;
+  color: $white;
+}
+// #home-tab {
+//   background-color: $mintgreen;
+// }
+
+// #profile-tab {
+
+// }
