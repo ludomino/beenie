@@ -24,8 +24,8 @@
         placeholder: "Message #{@category.name}",
         wrapper_html: {class: "flex-grow-1"}
       %>
+      <%= f.input :photo, as: :file %>
       <%= f.submit "Send", class: "btn btn-light mb-3" %>
-      <%#= f.input :image, as: :file %>
       <% end %>
   </div>
 

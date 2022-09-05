@@ -5,6 +5,8 @@
     <strong><%= message.user.nickname %></strong>
     <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
   </small>
-  <p><%= message.content  %></p>
-  <%#= cl_image_tag @message.photo.key %>
+  <p><%= message.content %></p>
+  <% if message.photo.attached? %>
+    <%= cl_image_tag message.photo.key %>
+  <% end %>
 </div>
