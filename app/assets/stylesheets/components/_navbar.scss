@@ -4,11 +4,14 @@
 }
 
 .navvvv {
-  background-color: #265852;
+  background-image: image-url("Navbar.svg");
   position: fixed;
-  height: 56px;
-  width: 100vw;
+  height: 102px;
+  width: 431px;
   bottom: 0;
+  left: -40px;
+  padding-top: 46px;
+
 }
 // rgb(81, 57, 57);
 .item {
