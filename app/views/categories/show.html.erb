@@ -1,33 +1,38 @@
-<div class="categorynamemessage d-flex align-items-center">
-  <div class="categorytext ms-4 mt-3">
-    <h3><%= link_to "<",  categories_path, class:"link" %></h3>
-    <h1>#<%= @category.name %></h1>
+<div class="px-3 py-4">
+  <div class="align-items-center border-1 border-bottom d-flex pb-3">
+    <%= link_to categories_path, class:"link" do %>
+      <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+    <img width=40 height=40 class="rounded mx-3" src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80" alt="">
+    <h3 class="m-0">#<%= @category.name %></h3>
   </div>
 </div>
 
-<div class="container category"
-    data-controller="category-subscription"
-    data-category-subscription-category-id-value="<%= @category.id %>"
-  >
-      <div class="messages" data-category-subscription-target="messages">
-        <% @category.messages.each do |message| %>
-          <%= render "messages/message", message: message %>
-        <% end %>
-      </div>
+  <div class="container category"
+      data-controller="category-subscription"
+      data-category-subscription-category-id-value="<%= @category.id %>"
+    >
+        <div class="messages" data-category-subscription-target="messages">
+          <% @category.messages.each do |message| %>
+            <%= render "messages/message", message: message %>
+          <% end %>
+        </div>
 
-  <div class="messagesender">
-    <%= simple_form_for [@category, @message],
-      html: {data: {action: "turbo:submit-end->category-subscription#resetForm"}, class: "d-flex"} do |f|
-    %>
-      <%= f.input :content,
-        label: false,
-        placeholder: "Message #{@category.name}",
-        wrapper_html: {class: "flex-grow-1"}
-      %>
-      <%= f.input :photo, as: :file %>
-      <%= f.submit "Send", class: "btn btn-light mb-3" %>
+      <div class="input-group justify-content">
+        <%= simple_form_for [@category, @message],
+          html: {data: {action: "turbo:submit-end->category-subscription#resetForm"}, class: "d-flex"} do |f|
+        %>
+          <%= f.input :content,
+            label: false,
+            placeholder: "Message #{@category.name}",
+            wrapper_html: {class: "flex-grow-1"}
+          %>
+
+          <%= f.input :photo, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷' %>
+
+          <%= button_tag do %>
+            <i class="fa-solid fa-paper-plane"></i>
+          <% end %>
       <% end %>
+      </div>
   </div>
-
-</div>
-</div>
