@@ -8,5 +8,6 @@ class PagesController < ApplicationController
 
   def my_garden
     @plants = current_user.user_plants
+    FetchWeather.new(current_user).call
   end
 end
