@@ -14,8 +14,8 @@
 <%= render "shared/flashes" %>
 
     <%= yield %>
-    <%# unless current_page?(category_path) %>
+    <% unless controller_name ==  "categories" && action_name == "show" %>
       <%= render "shared/navbar" %>
-    <%# end %>
+    <% end %>
   </body>
 </html>
