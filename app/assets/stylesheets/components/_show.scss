@@ -10,7 +10,7 @@
 .containertext {
 padding: 15px;
 color: $greyblack;
-height: 420px;
+min-height: 420px;
 }
 
 
@@ -50,6 +50,6 @@ height: 420px;
 
 .containershow {
   overflow: scroll;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
 
 }

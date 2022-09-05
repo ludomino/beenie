@@ -2,6 +2,7 @@ class UserPlantsController < ApplicationController
 
   def show
     @user_plant = UserPlant.find(params[:id])
+    @plant = @user_plant.plant
     @personal_task = PersonalTask.new
   end
 
