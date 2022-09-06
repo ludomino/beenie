@@ -6,11 +6,11 @@ class Plant < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search,
-  against: [ :name],
-  associated_against: {
-    category: [:name]
-  },
-  using: {
-    tsearch: { prefix: true }
-  }
+                  against: [:name],
+                  associated_against: {
+                    category: [:name]
+                  },
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end

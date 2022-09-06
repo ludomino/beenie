@@ -1,5 +1,4 @@
 class UserPlantsController < ApplicationController
-
   def show
     @user_plant = UserPlant.find(params[:id])
     @plant = @user_plant.plant
@@ -46,5 +45,4 @@ class UserPlantsController < ApplicationController
   def user_plant_params
     params.require(:user_plant).permit(:planted_day)
   end
-
 end
