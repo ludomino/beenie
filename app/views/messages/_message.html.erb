@@ -2,7 +2,6 @@
   <% sender = message.user == current_user %>
     <div class="message <%= 'sender' if sender %>">
         <div class="message-content">
-            <%#= message.user.nickname %>
             <div class="message-wrapper">
               <% if message.photo.attached? %>
                 <%= cl_image_tag message.photo.key, height: 200, width: 300, crop: :fill %>
@@ -16,7 +15,7 @@
             <% if message.user != current_user %>
               <%= cl_image_tag message.user.photo.key, class: "avatar-bordered-small me-2", alt: "avatar-bordered" %>
             <% end %>
-          <p><strong><%= sender ? 'You' : message.user.nickname %></strong> at <%= message.created_at.strftime("%H:%M") %></p>
+          <p><strong data-category-subscription-target="sendername"><%= sender ? 'You' : message.user.nickname %></strong> at <%= message.created_at.strftime("%H:%M") %></p>
         </div>
     </div>
 </div>
