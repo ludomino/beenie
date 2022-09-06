@@ -31,14 +31,48 @@ user_abdel.photo.attach(io: file, filename: "user1.png", content_type: "image/pn
 user_abdel.save
 puts "user abdel"
 
+
 category_1 = Category.create!(name: "Asparagaceae")
+file = URI.open("https://images.unsplash.com/photo-1606712131645-f8bf70d2a4a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80")
+category_1.picture.attach(io: file, filename: "category1.png", content_type: "image/png")
+category_1.save
+
 category_2 = Category.create!(name: "Cactaceae")
+file = URI.open("https://images.unsplash.com/photo-1656495616109-304dcd5be8ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80")
+category_2.picture.attach(io: file, filename: "category2.png", content_type: "image/png")
+category_2.save
+
 category_3 = Category.create!(name: "Dypsis lutescens")
+file = URI.open("https://images.unsplash.com/photo-1599122989511-29b36fe90a4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2835&q=80")
+category_3.picture.attach(io: file, filename: "category3.png", content_type: "image/png")
+category_3.save
+
 category_4 = Category.create!(name: "Bamboos")
+file = URI.open("https://images.unsplash.com/photo-1586581277029-5769487f3881?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+category_4.picture.attach(io: file, filename: "category4.png", content_type: "image/png")
+category_4.save
+
 category_5 = Category.create!(name: "Succulent")
+file = URI.open("https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2090&q=80")
+category_5.picture.attach(io: file, filename: "category5.png", content_type: "image/png")
+category_5.save
+
 category_6 = Category.create!(name: "Gesneriaceae")
+file = URI.open("https://live.staticflickr.com/8423/7602096476_d78412123e_b.jpg")
+category_6.picture.attach(io: file, filename: "category6.png", content_type: "image/png")
+category_6.save
+
 category_7 = Category.create!(name: "Araceae")
+file = URI.open("https://images.unsplash.com/photo-1579843019855-296c6f39a41e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80")
+category_7.picture.attach(io: file, filename: "category7.png", content_type: "image/png")
+category_7.save
+
 category_8 = Category.create!(name: "Apocynaceae")
+file = URI.open("https://images.unsplash.com/photo-1632918736641-446a9159c258?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2874&q=80")
+category_8.picture.attach(io: file, filename: "category8.png", content_type: "image/png")
+category_8.save
+
+puts "categories"
 
 images = [
   "https://apps.rhs.org.uk/plantselectorimages/detail/visi41580.jpg",

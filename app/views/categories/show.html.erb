@@ -3,7 +3,8 @@
     <%= link_to categories_path, class:"link" do %>
       <i class="fa-solid fa-arrow-left"></i>
     <% end %>
-    <img width=40 height=40 class="rounded mx-3" src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80" alt="">
+    <%= cl_image_tag @category.picture.key, width:40, height: 40, class: 'rounded mx-3'%>
+    <%# <img width=40 height=40 class="rounded mx-3" src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80" alt=""> %>
     <h3 class="m-0">#<%= @category.name %></h3>
   </div>
 </div>

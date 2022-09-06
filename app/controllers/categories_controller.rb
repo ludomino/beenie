@@ -8,4 +8,8 @@ class CategoriesController < ApplicationController
     @messages = @category.messages.order(created_at: :DESC)
     @message = Message.new
   end
+
+  def category_params
+    params.require(:category).permit(:name, :picture)
+  end
 end

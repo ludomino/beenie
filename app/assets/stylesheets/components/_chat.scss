@@ -11,7 +11,7 @@
 //   .messages {
 //     height: 100%;
 //     overflow: scroll;
-//     padding: 1rem;
+//     paddingd: 1rem;
 //     background-color: white;
 //   }
 
@@ -99,19 +99,18 @@
 }
 
 .card-category {
-  background-color: $greensea;
-  background-size: cover;
-  background-position: center;
-  height: 70px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  color: $white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  background-position: center;
+  background-size: cover;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  color: $white;
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  height: 100px;
+  justify-content: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .card-category h1 {
