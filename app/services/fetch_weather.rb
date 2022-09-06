@@ -1,15 +1,14 @@
 require "open-uri"
 
 class FetchWeather
-
   def initialize(current_user)
     @user = current_user
   end
 
   def call
     # dans le rails console : user = User.first // relancer la console
-    #FetchWeather.new(user).call
-    #info : "tempmax", "tempmin", "conditions",  "icon"
+    # FetchWeather.new(user).call
+    # info : "tempmax", "tempmin", "conditions",  "icon"
     scrap
   end
 
