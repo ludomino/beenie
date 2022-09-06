@@ -1,3 +1,9 @@
+
+
+  <div class="mt-4">
+    <% if params[:query].nil? || params[:query] == "" %>
+        <h2 class="searchtitle">All <%= @plants.count %> plants.</h2>
+
 <div class="container">
     <div class="search-form-control form-group ms-3 mt-3">
         <%= form_with url: plants_path, method: :get, class: "d-flex align-items-center" do %>
@@ -11,16 +17,16 @@
           <% end %>
         <% end %>
       </div>
-  <%# <br> %>
-  <div class="mt-4">
-    <% if params[:query].nil? || params[:query] == "" %>
-        <h2 class="searchtitle">All <%= @plants.count %> plants.</h2>
+
+      <br>
+
           <div class="cards">
             <% @plants.each do |plant| %>
               <%= link_to plant_path(plant) do %>
                 <div class="card-trip">
-                  <h3><%= plant.category.name %></h3>
+
                     <%= cl_image_tag plant.image.key %>
+                    <h3><%= plant.category.name %></h3>
                     <div class="card-trip-infos">
                       <div>
                         <h2><%= plant.name %></h2>
@@ -32,15 +38,32 @@
         </div>
 
 
+
       <% else %>
-        <h2 class="searchtitle">You searched for <strong><%= params[:query] %></strong>. We found <%= @plants.count %> plants out of <%= Plant.count %>.</h2>
+        <h2 class="searchtitle">Results of your search for <strong><%= params[:query] %></strong>. We found <%= @plants.count %> plants out of <%= Plant.count %>.</h2>
+
+<div class="container">
+    <div class="search-form-control form-group ms-3 mt-3">
+        <%= form_with url: plants_path, method: :get, class: "d-flex align-items-center" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find your plant or category 🌱"
+          %>
+          <%= button_tag class: "searchbtn2 btn btn-danger d-flex justify-content-center " do %>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          <% end %>
+        <% end %>
+      </div>
+       <br>
 
         <div class="cards">
           <% @plants.each do |plant| %>
             <%= link_to plant_path(plant) do %>
               <div class="card-trip">
-                <h3><%= plant.category.name %></h3>
+
                   <%= cl_image_tag plant.image.key %>
+                  <h3><%= plant.category.name %></h3>
                   <div class="card-trip-infos">
                     <div>
                       <h2><%= plant.name %></h2>
