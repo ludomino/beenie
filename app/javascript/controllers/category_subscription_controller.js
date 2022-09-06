@@ -10,7 +10,8 @@ export default class extends Controller {
   connect() {
     this.channel = createConsumer().subscriptions.create(
       { channel: "CategoryChannel", id: this.categoryIdValue },
-      { received: data => this.messagesTarget.insertAdjacentHTML("beforeend", data) }
+      { received: data => this.#insertMessageAndScrollDown(data) }
+
     )
     console.log(`Subscribe to the category with the id ${this.categoryIdValue}.`)
   }
