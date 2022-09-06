@@ -32,61 +32,99 @@
 //   font-size: 20px;
 
 // }
-// .categoryname h1{
-//   font-family: Inter, sans-serif;
-//   color: $greyblack;
-//   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-//   font-weight: 700;
-//   font-size: 20px;
-
-// }
-
-// .link {
-//   font-family: Inter, sans-serif;
-//   color: $white;
-//   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-//   font-weight: 700;
-//   font-size: 20px;
-
-// }
-
-// .card-category {
-//   background-color: $greensea;
-//   background-size: cover;
-//   background-position: center;
-//   height: 70px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: $white;
-//   font-size: 24px;
-//   font-weight: bold;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   border-radius: 5px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-// }
-
-// .card-category h1 {
-//   color: white;
-// }
-
-// .messagesender {
-//   background-color: $greensea;
-//   position: fixed;
-//   width: 100vw;
-//   bottom: 0;
-// }
-
-// .categorynamemessage {
-//   background-color: $greensea;
-//   position: fixed;
-//   width: 100vw;
-//   top: 0;
-
-// }
 
 
+#new_message {
+  background-color: #E9E9E9;
+  border: solid 1px lightgray;
+  border-radius: 18px;
+  position: fixed;
+  bottom: 0;
+  width: 94vw;
+  left: 0;
+  margin: 0 3vw 3vw 3vw;
+}
 
+#new_message #message_content {
+  background-color: transparent;
+  border: none;
+}
+
+#new_message .mb-3.message_content {
+  margin: 0 !important;
+}
+
+#new_message .mb-3.file.optional.message_photo {
+  font-size: 26px;
+  padding: 0;
+  margin: 0 !important;
+}
+
+#new_message button {
+  background: transparent;
+  border: none;
+  color: #007665;
+  padding-left: 18px;
+  padding-right: 10px
+}
+
+.messages {
+  max-height: calc(100vh - 105px);
+  overflow: scroll;
+  padding-top: 105px;
+}
+
+.chatheader {
+  position: fixed;
+  background: white;
+  width: 100%;
+}
+
+.categoryname h1{
+  font-family: Inter, sans-serif;
+  color: $greyblack;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.link {
+  font-family: Inter, sans-serif;
+  color: $white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.card-category {
+  background-color: $greensea;
+  background-size: cover;
+  background-position: center;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category h1 {
+  color: white;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
 
 .message {
   margin-bottom: 8px;
