@@ -32,43 +32,53 @@
   <div class="tab-pane fade show active" id="my-garden" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
     <div class="mygarden mt-4">
       <h1 class="ms-3">My garden</h1>
-        <div class="profilecards mt-3 ms-3 me-3">
+
+
+      <div class="profilecards mt-3 ms-3 me-3">
+
         <% @user_plants.where.not(planted_day: nil).each do |user_plant| %>
-            <%= link_to user_plant_path(user_plant) do %>
-              <div class="card-profile">
-                <%= cl_image_tag user_plant.plant.image.key %>
-                <div class="card-profile-infos">
-                  <div>
-                    <h2><%= user_plant.plant.name %></h2>
-                  </div>
-                </div>
+          <%= link_to user_plant_path(user_plant) do %>
+            <div class="card-profile">
+              <%= cl_image_tag user_plant.plant.image.key %>
+              <div class="card-profile-infos">
+                <div>
+                  <h2><%= user_plant.plant.name %></h2>
+                  <p><%= user_plant.plant.category.name %></p>
+                 </div>
               </div>
+            </div>
           <% end %>
         <% end %>
+
       </div>
+
+
+
     </div>
   </div>
 
   <div class="tab-pane fade" id="wishlist" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
     <div class="wishlist mt-3">
       <h1 class="ms-3">Your wishlist</h1>
+
+
       <div class="profilecards mt-3 ms-3 me-3">
         <% @user_plants.where(planted_day: nil).each do |user_plant| %>
           <div class="card-profile">
-            <%= link_to "#" do %>
-              <%= cl_image_tag user_plant.plant.image.key %>
-              <div class="card-profile-infos mb-2">
-                <div>
-                  <h2><%= user_plant.plant.name %></h2>
-                </div>
+            <%= cl_image_tag user_plant.plant.image.key %>
+            <div class="card-profile-infos">
+              <div>
+                <h2><%= user_plant.plant.name %></h2>
+                <p><%= user_plant.plant.category.name %></p>
               </div>
-            <% end %>
-            <div class="adding ms-3">
-              <%= link_to "Add to my garden", buy_plant_user_plant_path(user_plant)  %>
+              <%= link_to "Add to my garden", buy_plant_user_plant_path(user_plant), class: 'wishlist-add-btn'  %>
             </div>
           </div>
         <% end %>
       </div>
+
+
+
     </div>
   </div>
 </div>
