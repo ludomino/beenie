@@ -9,12 +9,16 @@
   <div class="row">
     <div class= "show-h2" class="row" class="col-sm-3">
 
-      <p> Category: <%= @plant.category.name %> </p>
+      <div class="categ"> Category: <%= @plant.category.name %> </div>
       <h1> <%= @plant.name %> </h1>
 
     <h3 class="descrip">Description</h3>
+          <hr>
+
       <p> <%= @plant.description%> </p>
         <h3 class="descrip">Follow-up</h3>
+              <hr>
+
       <p> <%= @plant.advice%> </p>
 
    </div>
@@ -23,7 +27,7 @@
    <%= simple_form_for [@plant, @user_plant] do |f| %>
     <%= f.input :planted_day, as: :hidden %>
     <div class="formulaire">
-      <%= f.submit "Add to my wishlist", class: "w-45 btn btn-dark " %>
+      <%= f.submit "Add to my wishlist", class: "w-45 btn btn-dark btn-wishlist " %>
       <%# <%= link_to "Buy this plant", root_path , class: "w-45 btn btn-dark" %>
     </div>
     <% end %>
