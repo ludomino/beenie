@@ -1,0 +1,36 @@
+#new_personal_task input {
+  color: white;
+  background-color: $greensea;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 3px;
+  padding: 6px;
+  right: 8px;
+  height: 45px;
+  position: absolute;
+  width: 45px;
+  border-radius: 50%;
+  border: none;
+}
+
+
+#new_personal_task {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #ced4da;
+  background-color: #e6f5ef;
+  border-radius: 30px;
+}
+
+#new_personal_task textarea {
+  resize: none;
+}
+
+#new_personal_task .mb-3.text.optional.personal_task_description {
+  margin: 0 !important;
+}
+
+#new_personal_task .form-control {
+  background-color: transparent;
+  border: none;
+}

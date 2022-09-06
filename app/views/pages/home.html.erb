@@ -9,7 +9,7 @@
       <%= form_with url: plants_path, method: :get, class: "d-flex align-items-center" do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
+          class: "form-control search-form-control",
           placeholder: "Find your plant or category 🌱"
         %>
         <%= button_tag class: "searchbtn btn btn-danger d-flex justify-content-center " do %>
@@ -26,8 +26,8 @@
       <% @plants.sample(4).each do |plant| %>
         <%= link_to plant_path(plant) do %>
           <div class="card-trip">
-            <h3><%= plant.category.name %></h3>
               <%= cl_image_tag plant.image.key %>
+              <h3><%= plant.category.name %></h3>
               <div class="card-trip-infos">
                 <div>
                   <h2><%= plant.name %></h2>
