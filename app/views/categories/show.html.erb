@@ -1,4 +1,4 @@
-<div class="px-3 py-4">
+<div class="chatheader px-3 py-4">
   <div class="align-items-center border-1 border-bottom d-flex pb-3">
     <%= link_to categories_path, class:"link" do %>
       <i class="fa-solid fa-arrow-left"></i>
@@ -18,10 +18,10 @@
           <% end %>
         </div>
 
-      <div class="input-group justify-content">
         <%= simple_form_for [@category, @message],
           html: {data: {action: "turbo:submit-end->category-subscription#resetForm"}, class: "d-flex"} do |f|
         %>
+      <div class="input-group justify-content">
           <%= f.input :content,
             label: false,
             placeholder: "Message #{@category.name}",
