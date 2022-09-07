@@ -4,22 +4,36 @@
   font-style: normal;
 }
 .top {
-  background: $greensea;
+  // background: $greensea;
+  // background-image: image-url("header.svg");
+  height: 2vh;
+  // position: relative;
+  // left: 117px;
+  // width: 274px;
+  bottom: 170px;
+  position: relative;
+}
+
+.header {
+  background-image: image-url("header.svg");
   height: 21vh;
+  position: relative;
+  left: 118px;
+  width: 274px;
 }
 .textbanner > h3 {
-  color: #FFFFFF;
+  color: $mintgreen;
   mix-blend-mode: normal;
   // position: absolute;
   // top: 64px;
   // left: 21px;
 }
 .textbanner h1 {
-  color: $mintgreen;
+  color: #98d0a6;
   // position: absolute;
   // top: 20px;
   // left: 21px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(178, 178, 178, 0.25);
   font-weight: 700;
   font-size: 32px;
 }
@@ -48,12 +62,12 @@
   background-color: rgb(206, 224, 206) ;
   border-radius: 128px;
   border-radius: 2px;
-  width: 340px;
+  width: 325px;
 }
 
 .searchbtn {
   position: absolute;
-  left: 303px;
+  left: 321px;
   /* top: 130px; */
   border-radius: 128px;
   height: 30px;

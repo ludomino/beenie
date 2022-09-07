@@ -1,12 +1,15 @@
 <div class="main">
-  <div class="top">
-    <div class="textbanner ms-3">
+  <div class="header"></div>
+  <div class="top d-flex flex-column align-items-center">
+    <div class="textbanner">
+      <br>
       <br>
       <h1>Beenie</h1>
-      <h3 class="toptitle">Bring Nature Into Your Home</h3>
+      <br>
+      <%# <h3 class="toptitle">Bring Nature Into Your Home</h3> %>
     </div>
-    <div class="search-form-control form-group ms-3 mt-4">
-      <%= form_with url: plants_path, method: :get, class: "d-flex align-items-center" do %>
+    <div class="search-form-control form-group mt-4">
+      <%= form_with url: plants_path, method: :get, class: "searchbar d-flex align-items-center" do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control search-form-control",

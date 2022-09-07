@@ -24,4 +24,6 @@ Rails.application.routes.draw do
 
   resources :gardens, only: [:show]
 
+  resources :logpages, only: [:index]
+
 end

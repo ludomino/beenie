@@ -1,0 +1,40 @@
+.logpage {
+  background-image: image-url("logpage.svg");
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+.logtitle {
+  position: relative;
+  top: 275px;
+}
+
+.logtitle h1 {
+  color: #98d0a6;
+  font-weight: 700;
+  font-size: 42px;
+
+
+}
+.logtitle h3 {
+  color: $greensea;
+  font-weight: 400;
+
+}
+
+.btn-flat {
+  color: $greensea;
+  border: 1px solid $greensea;
+  padding: 8px 24px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+  width: 255.72px;
+
+}
+
+.logbutton {
+  position: relative;
+  top: 330px;
+}
