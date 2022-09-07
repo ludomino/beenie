@@ -32,12 +32,12 @@ user_abdel.save
 puts "user abdel"
 
 
-category_1 = Category.create!(name: "Asparagaceae")
+category_1 = Category.create!(name: "Asparagus")
 file = URI.open("https://images.unsplash.com/photo-1606712131645-f8bf70d2a4a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80")
 category_1.picture.attach(io: file, filename: "category1.png", content_type: "image/png")
 category_1.save
 
-category_2 = Category.create!(name: "Cactaceae")
+category_2 = Category.create!(name: "Cactus")
 file = URI.open("https://images.unsplash.com/photo-1656495616109-304dcd5be8ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80")
 category_2.picture.attach(io: file, filename: "category2.png", content_type: "image/png")
 category_2.save
@@ -62,7 +62,7 @@ file = URI.open("https://live.staticflickr.com/8423/7602096476_d78412123e_b.jpg"
 category_6.picture.attach(io: file, filename: "category6.png", content_type: "image/png")
 category_6.save
 
-category_7 = Category.create!(name: "Araceae")
+category_7 = Category.create!(name: "Arum")
 file = URI.open("https://images.unsplash.com/photo-1579843019855-296c6f39a41e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80")
 category_7.picture.attach(io: file, filename: "category7.png", content_type: "image/png")
 category_7.save

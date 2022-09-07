@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
           # the client's current_user
           user_id: @message.user.id,
           username: @message.user.nickname,
-          userimg: @message.user.photo.key
+          user_photo_url: @message.user.photo.url
         }
       )
       head :ok
