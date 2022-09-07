@@ -28,10 +28,13 @@
 .weather{
   font-size: small;
   margin-top: -10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   //position: absolute;
   top: 185px;
-  margin-left: 80px;
+  margin-left: 66px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 .card-profile {
   overflow: hidden;
@@ -130,11 +133,3 @@
 .nav-tabs {
   border-width: 0px;
 }
-
-// #home-tab {
-//   background-color: $mintgreen;
-// }
-
-// #profile-tab {
-
-// }

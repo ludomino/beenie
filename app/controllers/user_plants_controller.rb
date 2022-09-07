@@ -12,6 +12,7 @@ class UserPlantsController < ApplicationController
     @user_plant.user = current_user
     if @user_plant.save
       redirect_to garden_path(current_user)
+      flash.notice = "This plant was just added to your wishlist !"
     else
       render "plants/show", status: :unprocessable_entity
     end
