@@ -19,7 +19,7 @@
 <%= render "shared/flashes" %>
 
     <%= yield %>
-    <% unless controller_name ==  "categories" && action_name == "show" %>
+    <% unless controller_name ==  "categories" && action_name == "show" || controller_name ==  "logpages" && action_name == "index"%>
       <%= render "shared/navbar" %>
     <% end %>
   </body>
