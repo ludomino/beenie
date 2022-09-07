@@ -1,6 +1,13 @@
-
-
-  <div class="mt-4">
+ <div class="header"></div>
+  <div class="top d-flex flex-column align-items-center">
+    <div class="textbanner">
+      <br>
+      <br>
+      <h1>Beenie</h1>
+      <%# <h3 class="toptitle">Bring Nature Into Your Home</h3> %>
+    </div>
+  </div>
+  <div class="">
     <% if params[:query].nil? || params[:query] == "" %>
         <h2 class="searchtitle">All <%= @plants.count %> plants.</h2>
 
