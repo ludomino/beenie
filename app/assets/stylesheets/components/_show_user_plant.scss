@@ -10,6 +10,11 @@
   width: 45px;
   border-radius: 50%;
   border: none;
+
+}
+
+.personal_task_description .form-control:focus {
+  box-shadow: none;
 }
 
 
@@ -24,6 +29,7 @@
 
 #new_personal_task textarea {
   resize: none;
+  box-shadow: none;
 }
 
 #new_personal_task .mb-3.text.optional.personal_task_description {
