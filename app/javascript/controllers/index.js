@@ -9,3 +9,6 @@ application.register("category-subscription", CategorySubscriptionController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import RedirectionController from "./redirection_controller"
+application.register("redirection", RedirectionController)
