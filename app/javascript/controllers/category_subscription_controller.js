@@ -38,7 +38,7 @@ export default class extends Controller {
     if (!sender) {
       msgElement.classList.remove('sender')
       msgElement.querySelector('strong').innerText = data.username
-      msgElement.querySelector('.message-infos').insertAdjacentHTML('afterbegin', `<img src="http://res.cloudinary.com/drvq3y1ul/image/upload/v1/development/${data.userimg}" class="avatar-bordered-small me-2">`)
+      msgElement.querySelector('.message-infos').insertAdjacentHTML('afterbegin', `<img src="${data.user_photo_url}" class="avatar-bordered-small me-2">`)
     }
     this.#insertMessage(msgElement)
     this.#scrollToBottom()
