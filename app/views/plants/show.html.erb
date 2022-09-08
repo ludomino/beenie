@@ -31,7 +31,7 @@
 
       </div>
       <div class="formulaire">
-        <%= f.submit "Buy this plant 🌱", class: "buy mt-3", data: {controller:"redirection", action:"click->redirection#next" , redirection_url_value: "https://www.jardiland.com/catalogsearch/result/?q=#{@plant.name.split(' ').first}"}  %>
+        <%= f.submit "Buy this plant ", class: "buy mt-3", data: {controller:"redirection", action:"click->redirection#next" , redirection_url_value: "https://www.jardiland.com/catalogsearch/result/?q=#{@plant.name.split(' ').first}"}  %>
       </div>
     </div>
     <% end %>
