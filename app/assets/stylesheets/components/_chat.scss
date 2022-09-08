@@ -51,6 +51,7 @@
   width: 94vw;
   left: 0;
   margin: 0 3vw 3vw 3vw;
+
 }
 
 #new_message #message_content {
@@ -199,5 +200,11 @@
         border-radius: 5px;
       }
     }
+  }
+}
+
+#message_content {
+  &:focus {
+    box-shadow: none !important
   }
 }
