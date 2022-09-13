@@ -46,8 +46,6 @@ min-height: 420px;
   justify-content: space-around;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-
-
 }
 
 .btn-dark {
@@ -71,7 +69,7 @@ min-height: 420px;
 
 .btn-wishlist {
   width: 46%;
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 10px;
 }
 
@@ -79,9 +77,10 @@ min-height: 420px;
 hr {
  opacity: 0.6;}
 
-.buy {
-  background-color: transparent;
-  border: none;
-  text-decoration: underline;
-
+.wishlist {
+  input {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
  }
+}

@@ -14,7 +14,10 @@
 
 body {
   background-color: $white;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 390px;
+
 }
 
 // .container {
