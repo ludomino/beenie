@@ -1,39 +1,42 @@
-<div class="chatheader px-3 py-4">
-  <div class="align-items-center border-1 border-bottom d-flex pb-3">
-    <%= link_to categories_path, class:"link" do %>
-      <i class="fa-solid fa-arrow-left"></i>
-    <% end %>
-    <%= cl_image_tag @category.picture.key, width:40, height: 40, class: 'rounded mx-3'%>
-    <h3 class="m-0">#<%= @category.name %></h3>
-  </div>
-</div>
+<div class="bodychat">
 
-  <div class="container category"
-      data-controller="category-subscription"
-      data-category-subscription-category-id-value="<%= @category.id %>"
-      data-category-subscription-user-id-value="<%= current_user.id %>"
-    >
-        <div class="messages" data-category-subscription-target="messages">
-          <% @category.messages.each do |message| %>
-            <%= render "messages/message", message: message %>
-          <% end %>
-        </div>
-
-        <%= simple_form_for [@category, @message],
-          html: {data: {action: "turbo:submit-end->category-subscription#resetForm"}, class: "d-flex"} do |f|
-        %>
-      <div class="input-group justify-content">
-          <%= f.input :content,
-            label: false,
-            placeholder: "Message #{@category.name}",
-            wrapper_html: {class: "flex-grow-1"}
-          %>
-
-          <%= f.input :photo, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷' %>
-
-          <%= button_tag do %>
-            <i class="fa-solid fa-paper-plane"></i>
-          <% end %>
+  <div class="chatheader px-3 py-4">
+    <div class="align-items-center border-1 border-bottom d-flex pb-3">
+      <%= link_to categories_path, class:"link" do %>
+        <i class="fa-solid fa-arrow-left"></i>
       <% end %>
-      </div>
+      <%= cl_image_tag @category.picture.key, width:40, height: 40, class: 'rounded mx-3'%>
+      <h3 class="m-0">#<%= @category.name %></h3>
+    </div>
   </div>
+
+    <div class="container category"
+        data-controller="category-subscription"
+        data-category-subscription-category-id-value="<%= @category.id %>"
+        data-category-subscription-user-id-value="<%= current_user.id %>"
+      >
+          <div class="messages" data-category-subscription-target="messages">
+            <% @category.messages.each do |message| %>
+              <%= render "messages/message", message: message %>
+            <% end %>
+          </div>
+
+          <%= simple_form_for [@category, @message],
+            html: {data: {action: "turbo:submit-end->category-subscription#resetForm"}, class: "d-flex"} do |f|
+          %>
+        <div class="input-group justify-content">
+            <%= f.input :content,
+              label: false,
+              placeholder: "Message #{@category.name}",
+              wrapper_html: {class: "flex-grow-1"}
+            %>
+
+            <%= f.input :photo, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷' %>
+
+            <%= button_tag do %>
+              <i class="fa-solid fa-paper-plane"></i>
+            <% end %>
+        <% end %>
+        </div>
+    </div>
+</div>
