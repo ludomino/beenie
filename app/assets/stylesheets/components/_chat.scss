@@ -48,7 +48,7 @@
   border-radius: 18px;
   position: fixed;
   bottom: 0;
-  width: 94vw;
+  width: 360px;
   left: 0;
   margin: 0 3vw 3vw 3vw;
 
@@ -86,7 +86,7 @@
 .chatheader {
   position: fixed;
   background: white;
-  width: 100%;
+  width: 390px;
 }
 
 .categoryname h1{
@@ -131,7 +131,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  width: 390px;
 }
 
 .message {
@@ -208,3 +208,4 @@
     box-shadow: none !important
   }
 }
+
